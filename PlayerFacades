@@ -1,0 +1,38 @@
+using UnityEngine;
+
+namespace DefaultNamespace
+{
+    public class PlayerFacade : MonoBehaviour
+    {
+        private PlayerMovement movement;
+        private PlayerCombat combat;
+
+
+        public PlayerFacade()
+        {
+            movement = new PlayerMovement();
+            combat = new PlayerCombat();
+        }
+
+        public void MoveForward()
+        {
+            movement.Move(Vector3.forward);
+        }
+
+        public void Jump()
+        {
+            movement.Jump();
+        }
+
+
+        public void Attack()
+        {
+            combat.Attack();
+        }
+
+        public void Defend()
+        {
+            combat.Defend();
+        }
+    }
+}
