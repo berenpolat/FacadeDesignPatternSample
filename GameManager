@@ -1,0 +1,36 @@
+using UnityEngine;
+
+namespace DefaultNamespace
+{
+    public class GameManager : MonoBehaviour
+    {
+        private PlayerFacade player;
+
+
+        private void Start()
+        {
+            player = new PlayerFacade();
+        }
+
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                player.MoveForward();
+            }
+            else if (Input.GetKeyDown(KeyCode.Space))
+            {
+                player.Jump();
+            }
+            else if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                player.Attack();
+            }
+            else if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                player.Defend();
+            }
+        }
+    }
+}
