@@ -1,0 +1,17 @@
+using UnityEngine;
+
+namespace DefaultNamespace
+{
+    public class PlayerCombat
+    {
+        public void Attack()
+        {
+            Debug.Log("Attacking");
+        }
+
+        public void Defend()
+        {
+            Debug.Log("Defending");
+        }
+    }
+}
